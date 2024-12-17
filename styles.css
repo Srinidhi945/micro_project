@@ -1,0 +1,104 @@
+/* Reset default list styles */
+nav {
+    margin: 20px 0;
+}
+
+/* Style for tabs */
+nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #48C9B0; /* Greenish-blue color for tabs */
+    color: #fff; /* White text color for tabs */
+    text-decoration: none;
+    border: 1px solid #48C9B0; /* Border color matches background */
+    border-bottom: none;
+    border-radius: 5px 5px 0 0; /* Rounded corners for top */
+    margin-right: 5px; /* Adjust spacing between tabs */
+}
+
+/* Style for active tab */
+nav a.active {
+    background-color: #3498DB; /* Blue color for active tab */
+    border-color: #3498DB; /* Border color matches background */
+}
+
+/* Hover effect */
+nav a:hover {
+    background-color: #5DADE2; /* Lighter blue color on hover */
+    border-color: #5DADE2; /* Border color matches background */
+}
+
+/* Adjust last tab border radius */
+nav a:last-child {
+    margin-right: 0; /* Remove margin from the last tab */
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background color */
+    padding: 20px; /* Add padding to create space around content */
+    position: relative; /* Make the body position relative */
+}
+
+
+/* Main Heading Styles */
+/* Main Heading Styles */
+h1 {
+    font-weight: bold; /* Make main heading bold */
+    color: #3AAFA9; /* Soft green color for main heading */
+    background-color: #EAEDED; /* Light grayish-blue background color for the bar */
+    padding: 10px 20px; /* Add padding to heading */
+    border-radius: 5px; /* Rounded corners for heading */
+    margin-top: 0; /* Remove default margin from heading */
+}
+
+
+/* Question Heading Styles */
+label {
+    display: block; /* Display each question on a new line */
+    font-weight: bold; /* Make question headings bold */
+    margin-bottom: 10px; /* Add margin to create space between questions */
+}
+
+/* Differentiate each question with different colors */
+label:nth-of-type(odd) {
+    color: #16A085; /* Green color for odd-numbered questions */
+}
+
+label:nth-of-type(even) {
+    color: #3498DB; /* Blue color for even-numbered questions */
+}
+
+/* Container Styles */
+.container {
+    padding: 20px; /* Add padding to container */
+    background-color: #ffffff; /* White background color for container */
+    border-radius: 8px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+}
+
+/* Submit Button Styles */
+button[type="submit"] {
+    background-color: #16A085; /* Green color for submit button */
+    color: #ffffff; /* White text color for submit button */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding to button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 4px; /* Add border radius for rounded corners */
+}
+
+/* Submit Button Hover Styles */
+button[type="submit"]:hover {
+    background-color: #138D75; /* Darker green color on hover */
+}
+
+/* Watermark Styles */
+.watermark {
+    position: fixed; /* Make the watermark position fixed */
+    top: 50%; /* Position the watermark at the vertical center */
+    left: 50%; /* Position the watermark at the horizontal center */
+    transform: translate(-50%, -50%); /* Center the watermark */
+    opacity: 0.1; /* Adjust the opacity of the watermark */
+    z-index: -1; /* Set z-index to ensure the watermark is behind other content */
+}
