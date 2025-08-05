@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Health Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Mental Health Quiz</h1>
+    <form method="post">
+        <!-- Add CSRF Token -->
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+        <!-- Username Field -->
+        <input type="text" name="username" placeholder="Enter your name" required><br>
+        <!-- First 10 Questions -->
+        {% for question in questions %}
+            <label>{{ loop.index }}. {{ question }}</label><br>
+            <input type="radio" name="q{{ loop.index }}" value="never"> Never<br>
+            <input type="radio" name="q{{ loop.index }}" value="rarely"> Rarely<br>
+            <input type="radio" name="q{{ loop.index }}" value="sometimes"> Sometimes<br>
+            <input type="radio" name="q{{ loop.index }}" value="often"> Often<br>
+            <input type="radio" name="q{{ loop.index }}" value="always"> Always<br>
+        {% endfor %}
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+ <!-- Watermark Image-->
+    <img src="{{ url_for('static', filename='watermark.jpg') }}" class="watermark" alt="Watermark Image">
+
+</body>
+</html>

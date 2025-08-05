@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Additional Mental Health Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Mental Health Quiz</h1>
+    <form method="post">
+        <!-- Add CSRF Token -->
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+        <!-- Additional Questions -->
+        {% for question in questions %}
+            <label>{{ loop.index+10 }}. {{ question }}</label><br>
+            <input type="radio" name="q{{ loop.index }}" value="never"> Never<br>
+            <input type="radio" name="q{{ loop.index }}" value="rarely"> Rarely<br>
+            <input type="radio" name="q{{ loop.index }}" value="sometimes"> Sometimes<br>
+            <input type="radio" name="q{{ loop.index }}" value="often"> Often<br>
+            <input type="radio" name="q{{ loop.index }}" value="always"> Always<br>
+        {% endfor %}
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+<!-- Watermark Image-->
+    <img src="https://youthhq.ca/wp-content/uploads/2021/12/Mind-Matters-Logo.png" alt="Watermark" class="watermark">
+</body>
+</html>

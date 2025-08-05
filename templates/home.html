@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MIND MATTERS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>MIND MATTERS</h1>
+    <h2>Welcome to the Mental Health Awareness Website</h2>
+    <nav class="tabs">
+        <a href="{{ url_for('brief') }}">Brief</a> |
+        <a href="{{ url_for('quiz') }}">Quiz</a>
+        <!-- Watermark Image -->
+        <img src="https://youthhq.ca/wp-content/uploads/2021/12/Mind-Matters-Logo.png" alt="Watermark" class="watermark">
+    </nav>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Recommendations</h1>
+    <!-- Display the greeting message with the username -->
+    <p>Hi {{ username }}, {{ symptoms_and_recommendations }}</p>
+    <ul>
+        {% for recommendation in recommendations %}
+        <li>{{ recommendation }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+    <!-- Watermark Image-->
+    <img src="https://youthhq.ca/wp-content/uploads/2021/12/Mind-Matters-Logo.png" alt="Watermark" class="watermark">
+</body>
+</html>
